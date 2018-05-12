@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.courtcounter.MainActivity">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/scoreboard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+    <TextView
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+        android:text="Team A"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="#616161"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+    />
+
+    <TextView android:id="@+id/team_a_score"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="0"
+        android:textSize="56sp"
+        android:textColor="#000000"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="center"
+        />
+
+    <Button
+    android:id="@+id/btn_teama_3pts"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/threePtsBtnText"
+        android:textSize="20sp"
+    android:layout_marginLeft="24dp"
+    android:layout_marginRight="24dp"
+    android:layout_marginBottom="4dp"
+    android:onClick="updateScoreForTeam"/>
+
+    <Button
+        android:id="@+id/btn_teama_2pts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/twoPtsBtnText"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="updateScoreForTeam"/>
+
+
+    <Button
+        android:id="@+id/btn_teama_1pts"
+        android:layout_width="match_parent"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="@string/onePtsBtnText"
+        android:textSize="20sp"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="4dp"
+        android:onClick="updateScoreForTeam"/>
+
+
+    </LinearLayout>
+    <!-- Border to separate the two scoreboards !-->
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:text="Team B"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#616161"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            />
+
+        <TextView android:id="@+id/team_b_score"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="0"
+            android:textSize="56sp"
+            android:textColor="#000000"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/btn_teamb_3pts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/threePtsBtnText"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="updateScoreForTeam"/>
+
+        <Button
+            android:id="@+id/btn_teamb_2pts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/twoPtsBtnText"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="updateScoreForTeam"/>
+
+
+        <Button
+            android:id="@+id/btn_teamb_1pts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onePtsBtnText"
+            android:textSize="20sp"
+            android:padding="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="4dp"
+            android:onClick="updateScoreForTeam"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESET"
+        android:textSize="30sp"
+        android:onClick="resetTeamScores"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"/>
+</RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
